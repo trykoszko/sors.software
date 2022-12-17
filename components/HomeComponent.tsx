@@ -119,7 +119,7 @@ export const HomeComponent = () => {
                     </Link>
 
                     <Link
-                        href="mailto:company@sors-dev.codes"
+                        href="mailto:dev@sors.software"
                         className={styles.headerButton}
                     >
                         Contact us &raquo;
