@@ -85,14 +85,6 @@
 .mainContentHeading {
   margin-bottom: 1rem;
   letter-spacing: -1px;
-
-  word-break: break-word;
-  line-break: strict;
-}
-
-.mainContentText {
-  word-break: break-word;
-  line-break: strict;
 }
 
 .specialText {
@@ -194,8 +186,20 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 480px) {
+  .mainContentHeading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainContentText {
+    display: flex;
+    flex-direction: column;
+  }
 }
+
+/*@media (max-width: 700px) {*/
+/*}*/
 
 @media (max-width: 1120px) {
   .mainGridBox {
