@@ -16,20 +16,20 @@ export const HomeComponent = () => {
             ],
             logos: [
                 {
-                    icon: '/nestjs-icon.svg',
-                    alt: 'Nest JS'
+                    icon: '/nodejs-icon.svg',
+                    alt: 'Node JS'
                 },
                 {
                     icon: '/nestjs-icon.svg',
                     alt: 'Nest JS'
                 },
                 {
-                    icon: '/nestjs-icon.svg',
-                    alt: 'Nest JS'
+                    icon: '/expressjs-icon.svg',
+                    alt: 'Express JS'
                 },
                 {
-                    icon: '/nestjs-icon.svg',
-                    alt: 'Nest JS'
+                    icon: '/aws-icon.svg',
+                    alt: 'Amazon Web Services'
                 }
             ]
         },
@@ -48,15 +48,11 @@ export const HomeComponent = () => {
             logos: [
                 {
                     icon: '/wordpress-icon.svg',
-                    alt: 'Nest JS'
+                    alt: 'WordPress'
                 },
                 {
-                    icon: '/wordpress-icon.svg',
-                    alt: 'Nest JS'
-                },
-                {
-                    icon: '/wordpress-icon.svg',
-                    alt: 'Nest JS'
+                    icon: '/woocommerce-icon.svg',
+                    alt: 'WooCommerce'
                 }
             ]
         },
@@ -73,49 +69,40 @@ export const HomeComponent = () => {
             logos: [
                 {
                     icon: '/nextjs-icon.svg',
-                    alt: 'Nest JS'
+                    alt: 'Next JS'
                 },
                 {
-                    icon: '/nextjs-icon.svg',
-                    alt: 'Nest JS'
+                    icon: '/gatsby-icon.svg',
+                    alt: 'Gatsby'
                 },
                 {
-                    icon: '/nextjs-icon.svg',
-                    alt: 'Nest JS'
+                    icon: '/react-icon.svg',
+                    alt: 'React'
                 },
                 {
-                    icon: '/nextjs-icon.svg',
-                    alt: 'Nest JS'
-                },
-                {
-                    icon: '/nextjs-icon.svg',
-                    alt: 'Nest JS'
+                    icon: '/typescriptlang-icon.svg',
+                    alt: 'Typescript'
                 }
             ]
         }
-    ];
+    ]
+
+    const currentYear = (new Date()).getFullYear()
 
     return (
         <div className={styles.wrapper}>
+            <div className={styles.container}>
 
-            <div className={styles.bg}>
-                <svg
-                    className={styles.bgShape}
-                    viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fillOpacity=".3"
-                          d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"/>
-                    <defs>
-                        <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645"
-                                        gradientUnits="userSpaceOnUse">
-                            <stop stopColor="#9089FC"></stop>
-                            <stop offset="1" stopColor="#FF80B5"></stop>
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
+                <div className={styles.bg}>
+                    <svg
+                        className={styles.bgShape}
+                        viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#9089FC" fillOpacity=".1"
+                              d="M317.217 528.975L203.852 678 0 438.341l317.219 40.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"/>
+                    </svg>
+                </div>
 
-            <header className={styles.header}>
-                <div className={styles.containerH}>
+                <header className={styles.header}>
                     <Link
                         href="/"
                         rel="noopener noreferrer"
@@ -135,22 +122,16 @@ export const HomeComponent = () => {
                         href="mailto:company@sors-dev.codes"
                         className={styles.headerButton}
                     >
-                        <Image
-                            src="/email.svg"
-                            alt="write us an e-mail"
-                            width={24}
-                            height={24}
-                        />
+                        Contact us &raquo;
                     </Link>
-                </div>
-            </header>
+                </header>
 
-            <main className={styles.main}>
-                <div className={styles.container}>
-
+                <main className={styles.main}>
                     <div className={styles.mainContent}>
-                        <h1 className={styles.mainContentHeading}>We create <span className={styles.mainContentHeadingSpecial}>software</span></h1>
-                        <p className={styles.mainContentText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nisi et elit tempus dictum non vitae magna. Nunc enim libero, ornare eu congue quis, fermentum quis ligula. Ut rhoncus sagittis condimentum.</p>
+                        <h1 className={styles.mainContentHeading}>We create <span className={styles.specialText}>quality software</span></h1>
+                        <p className={styles.mainContentText}>
+                            With many years of experience in web development industry, we deliver top class software for local and global brands. <span className={styles.specialText}>Let's create something great <strong>together</strong>.</span>
+                        </p>
                     </div>
 
                     <ul className={styles.mainGrid}>
@@ -178,16 +159,13 @@ export const HomeComponent = () => {
                             </li>
                         ))}
                     </ul>
+                </main>
 
-                </div>
-            </main>
+                <footer className={styles.footer}>
+                    <p className={styles.footerText}>&copy; sors.software {currentYear}</p>
+                </footer>
 
-            <footer className={styles.footer}>
-                <div className={styles.container}>
-                    <p className={styles.footerText}>&copy; sors 2023</p>
-                </div>
-            </footer>
-
+            </div>
         </div>
     );
 }

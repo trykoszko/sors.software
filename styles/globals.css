@@ -1,14 +1,13 @@
 :root {
-  --max-width: 1400px;
+  --max-width: 1200px;
 
   --color-bg: #14191c;
   --color-default: #9089FC;
-  --color-default-alpha: rgba(144, 137, 252, .05);
+  --color-default-alpha: rgba(144, 137, 252, .08);
   --color-default-2: #7CB8FE;
-  --color-default-2-alpha: rgba(124, 184, 254, .05);
+  --color-default-2-alpha: rgba(124, 184, 254, .08);
   --color-default-3: #CC7CFE;
-  --color-default-3-alpha: rgba(204, 124, 254, .05);
-
+  --color-default-3-alpha: rgba(204, 124, 254, .08);
 }
 
 * {

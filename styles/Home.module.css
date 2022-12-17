@@ -11,7 +11,6 @@
 
 .wrapper {
   width: 100vw;
-  height: 100vh;
 
   position: relative;
 
@@ -21,7 +20,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  padding: 4rem 6rem 2rem;
+
+  padding: 2rem;
 }
 
 .container {
@@ -29,22 +29,8 @@
   height: 100%;
   max-width: var(--max-width);
 
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
-}
-
-.containerH {
-  width: 100%;
-  height: 100%;
-  max-width: var(--max-width);
-
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .bg {
@@ -82,10 +68,14 @@
   justify-content: space-between;
 }
 
-.main {
-  height: 100%;
+.headerButton {
+  padding: .6rem 1rem;
+  border-radius: 6px;
 
-  padding: 4rem 0;
+  border: 1px solid var(--color-default);
+  background-color: var(--color-default-alpha);
+
+  font-size: .8rem;
 }
 
 .mainContent {
@@ -94,35 +84,25 @@
   align-items: flex-start;
   justify-content: center;
 
-  margin-top: auto;
-  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .mainContentHeading {
-  font-size: 4rem;
-
   margin-bottom: 1rem;
+  letter-spacing: -1px;
 }
 
-.mainContentHeadingSpecial {
+.specialText {
   background: -webkit-linear-gradient(60deg, var(--color-default-2), var(--color-default), var(--color-default-3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.mainContentText {
-  max-width: 80%;
-
-  font-size: 1.4rem;
 }
 
 .mainGrid {
   width: 100%;
 
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .mainGridBox {
@@ -131,7 +111,7 @@
   border: 1px solid var(--color-default);
   background-color: var(--color-default-alpha);
 
-  padding: 2rem 3rem;
+  padding: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -148,18 +128,22 @@
   background-color: var(--color-default-3-alpha);
 }
 
-.mainGridBoxImage {}
 .mainGridBoxTitle {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -.5px;
 }
+
 .mainGridBoxList {
   font-size: .9rem;
-  list-style: none;
+
+  padding-left: .5rem;
+  list-style: disc;
 
   margin-bottom: 1.5rem;
 }
+
 .mainGridBoxListItem {
-margin-bottom: .2rem;
+  margin-bottom: .6rem;
 }
 
 .mainGridBoxIconList {
@@ -174,11 +158,9 @@ margin-bottom: .2rem;
 }
 
 .mainGridBoxIcon {
-  margin-right: 1rem;
-
   opacity: .8;
 
-  transition: all .3s;
+  margin-right: 1rem;
 }
 
 .footer {
@@ -186,38 +168,118 @@ margin-bottom: .2rem;
 }
 
 .footerText {
-  text-align: center;
+  font-size: .8rem;
 
-  font-size: .7rem;
+  margin-bottom: 1rem;
 }
 
-/* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  /*.card:hover {*/
-  /*  background: rgba(var(--card-rgb), 0.1);*/
-  /*  border: 1px solid rgba(var(--card-border-rgb), 0.15);*/
-  /*}*/
-
-  /*.card:hover span {*/
-  /*  transform: translateX(4px);*/
-  /*}*/
-
   .gridBoxIcon:hover {
     opacity: 1;
+  }
+
+  .headerButton:hover {
+    /*background-color: var(--color-default);*/
+
+    background: -webkit-linear-gradient(60deg, var(--color-default-2), var(--color-default), var(--color-default-3));
   }
 }
 
 @media (prefers-reduced-motion) {
-  .gridBoxIcon {
-    transition: none;
+  .bg {
+    animation: none;
   }
 }
 
 @media (max-width: 700px) {
+}
 
+@media (max-width: 1120px) {
+  .mainGridBox {
+    margin-bottom: 1.5rem;
+  }
+
+  .mainContentText {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (min-width: 701px) and (max-width: 1120px) {
+  .mainContentHeading {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1121px) {
+  .wrapper {
+    height: 100vh;
+
+    padding: 2rem 4rem;
+  }
+
+  .container {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+  }
+
+  .mainContent {
+    margin-top: 3rem;
+  }
+
+  .mainContentHeading {
+    font-size: 3rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .mainContentText {
+    max-width: 85%;
+
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+    margin-bottom: 2rem;
+  }
+
+  .mainGrid {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+
+    margin-top: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1401px) {
+  .wrapper {
+    padding: 4rem 6rem 2rem;
+  }
+
+  .main {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainContent {
+    margin-top: 5rem;
+  }
+
+  .mainContentHeading {
+    margin-bottom: 1.5rem;
+  }
+
+  .mainGridBox {
+    width: calc(100% / 3);
+  }
+
+  .mainGridBox:nth-of-type(2) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 
 }
 

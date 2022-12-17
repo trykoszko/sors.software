@@ -11,9 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <p>soon.</p>
+      {/*<p>soon.</p>*/}
 
-      {/*<HomeComponent />*/}
+      <HomeComponent />
     </>
   )
 }
