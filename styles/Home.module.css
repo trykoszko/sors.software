@@ -85,6 +85,14 @@
 .mainContentHeading {
   margin-bottom: 1rem;
   letter-spacing: -1px;
+
+  word-break: break-word;
+  line-break: strict;
+}
+
+.mainContentText {
+  word-break: break-word;
+  line-break: strict;
 }
 
 .specialText {
