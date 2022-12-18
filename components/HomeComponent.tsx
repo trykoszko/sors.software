@@ -130,7 +130,7 @@ export const HomeComponent = () => {
                     <div className={styles.mainContent}>
                         <h1 className={styles.mainContentHeading}>We create <span className={styles.specialText}>quality software</span></h1>
                         <p className={styles.mainContentText}>
-                            With many years of experience in web development industry, we deliver top class software for local and global brands. <span className={styles.specialText}>Let&apos;s create something great <strong>together</strong>.</span>
+                            With many years of experience in web development industry, we deliver top class software for local and global brands. <span className={styles.specialText}>Let&apos;s create something great together.</span>
                         </p>
                     </div>
 

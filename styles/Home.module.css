@@ -93,6 +93,18 @@
   -webkit-text-fill-color: transparent;
 }
 
+.specialText::-moz-selection {
+  background: var(--color-default);
+  color: var(--color-bg);
+  -webkit-text-fill-color: var(--color-bg);
+}
+
+.specialText::selection {
+  background: var(--color-default);
+  color: var(--color-bg);
+  -webkit-text-fill-color: var(--color-bg);
+}
+
 .mainGrid {
   width: 100%;
 
@@ -195,6 +207,10 @@
   .mainContentText {
     display: flex;
     flex-direction: column;
+  }
+
+  .mainContentText > span {
+    margin-top: .5rem;
   }
 }
 

@@ -10,6 +10,16 @@
   --color-default-3-alpha: rgba(204, 124, 254, .08);
 }
 
+::-moz-selection {
+  color: var(--color-default);
+  background: var(--color-bg);
+}
+
+::selection {
+  color: var(--color-default);
+  background: var(--color-bg);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
