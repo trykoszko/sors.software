@@ -12,7 +12,9 @@ export const HomeComponent = () => {
                 'Nest.js development',
                 'API development',
                 'Web application development',
-                'Web integrations development',
+                'Cloud development',
+                'Laravel development',
+                'PHP development'
             ],
             logos: [
                 {
@@ -30,39 +32,25 @@ export const HomeComponent = () => {
                 {
                     icon: '/aws-icon.svg',
                     alt: 'Amazon Web Services'
+                },
+                {
+                    icon: '/laravel-icon.svg',
+                    alt: 'Laravel'
+                },
+                {
+                    icon: '/php-icon.svg',
+                    alt: 'PHP'
                 }
             ]
         },
         {
             key: 1,
-            title: 'WordPress development',
-            items: [
-                'WordPress plugin development',
-                'WordPress theme development',
-                'WordPress website development',
-                'WooCommerce store development',
-                'Gutenberg blocks development',
-                'WordPress and WooCommerce support',
-                'Headless WordPress development'
-            ],
-            logos: [
-                {
-                    icon: '/wordpress-icon.svg',
-                    alt: 'WordPress'
-                },
-                {
-                    icon: '/woocommerce-icon.svg',
-                    alt: 'WooCommerce'
-                }
-            ]
-        },
-        {
-            key: 2,
             title: 'Front-end development',
             items: [
                 'Next.js development',
                 'Gatsby development',
                 'React development',
+                'React Native development',
                 'JAMstack development',
                 'Javascript development',
             ],
@@ -82,6 +70,33 @@ export const HomeComponent = () => {
                 {
                     icon: '/typescriptlang-icon.svg',
                     alt: 'Typescript'
+                }
+            ]
+        },
+        {
+            key: 2,
+            title: 'WordPress development',
+            items: [
+                'WordPress plugin development',
+                'WordPress theme development',
+                'WordPress website development',
+                'WooCommerce store development',
+                'Gutenberg blocks development',
+                'WordPress and WooCommerce support',
+                'Headless WordPress development'
+            ],
+            logos: [
+                {
+                    icon: '/wordpress-icon.svg',
+                    alt: 'WordPress'
+                },
+                {
+                    icon: '/woocommerce-icon.svg',
+                    alt: 'WooCommerce'
+                },
+                {
+                    icon: '/gutenberg-icon.svg',
+                    alt: 'Gutenberg'
                 }
             ]
         }
@@ -111,7 +126,7 @@ export const HomeComponent = () => {
                         <Image
                             className={styles.headerLogoImage}
                             src="/sors.svg"
-                            alt="Next.js Logo"
+                            alt="sors.software logo"
                             width={80}
                             height={80}
                             priority
@@ -128,7 +143,7 @@ export const HomeComponent = () => {
 
                 <main className={styles.main}>
                     <div className={styles.mainContent}>
-                        <h1 className={styles.mainContentHeading}>We create <span className={styles.specialText}>quality software</span></h1>
+                        <h1 className={styles.mainContentHeading}>We transfer <span className={styles.specialText}>vision</span> to <span className={styles.specialText}>software</span></h1>
                         <p className={styles.mainContentText}>
                             With many years of experience in web development industry, we deliver top class software for local and global brands. <span className={styles.specialText}>Let&apos;s create something great together.</span>
                         </p>
